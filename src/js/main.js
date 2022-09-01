@@ -1,17 +1,23 @@
 import Container from "./ContainerJS.js"
+import Title from "./TitleJS.js"
 
-const rootContainer = new Container('1440px', '960px')
-document.body.appendChild(rootContainer.render())
+const rootContainer = new Container()
+document.body.appendChild(rootContainer.render()).classList.add('rootContainer')
 rootContainer.background('#E5E5E5')
 
 
-const containerForImage = new Container('505px', '330px')
+const containerForImage = new Container()
 rootContainer.render().appendChild(containerForImage.render()).classList.add('containerForImage')
-containerForImage.background('red')
 
 
-const containerForContent = new Container('505px', '330px')
+
+const containerForContent = new Container()
 rootContainer.render().appendChild(containerForContent.render()).classList.add('containerForContent')
-containerForContent.background('blue')
+containerForContent.background('red')
+
+const TitleForContent = new Title('Lorem Ipsum')
+containerForContent.render().appendChild(TitleForContent.render()).classList.add('title')
+
+
 
 

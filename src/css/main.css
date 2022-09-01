@@ -3,27 +3,68 @@ body,html{
     padding: 0;
 }
 
+.rootContainer{
+padding-top: 96px;
+display: flex;
+justify-content: space-evenly;
+width:1440px;
+height: 960px;
 
+}
 
 .containerForImage{
-    position: absolute;
-    width: 505px;
-    height: 330px;
-    left: 230px;
-    top: 96px;
+
     
     background: url(/frontend-recruitment-task/images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale\,w_1002.jpg); 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    width:505px;
+    height: 330px;
     
 }
 
 .containerForContent{
-    position: absolute;
-    width: 380px;
-    height: 50px;
-    left: calc(50% - 380px/2 + 300px);
-    top: 96px;
+    width:505px;
+    height: 330px; 
+   
+}
+
+.containerForContent p{
+
+    font-family: 'Roboto';
+    font-size: 43px;
+    font-weight: 700;
+    line-height: 50,4px;
+}
+
+
+
+@media(max-width: 761px){
+
+    .body{
+        overflow-x:hidden;
+    }
+
+    .rootContainer{
+        width: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .containerForContent{
+        width:100vw;
+    
+    }
+
+    .containerForImage{
+        width: 100vw;
+        background-image: url(/frontend-recruitment-task/images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_1_1\,c_fill\,g_auto__c_scale\,w_767.jpg); 
+       
+    }
 
 }
+
+
+
