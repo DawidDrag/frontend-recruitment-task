@@ -1,0 +1,29 @@
+body,html{
+    margin:0;
+    padding: 0;
+}
+
+
+
+.containerForImage{
+    position: absolute;
+    width: 505px;
+    height: 330px;
+    left: 230px;
+    top: 96px;
+    
+    background: url(/frontend-recruitment-task/images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale\,w_1002.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    
+}
+
+.containerForContent{
+    position: absolute;
+    width: 380px;
+    height: 50px;
+    left: calc(50% - 380px/2 + 300px);
+    top: 96px;
+
+}
