@@ -44,6 +44,18 @@ text-align: justify;
 
 }
 
+.button{
+background-color: #E4C1AE ;
+border-radius: 32px;
+width: 128px;
+height: 48px;
+font-size: 16px;
+font-weight: 700;
+border:none;
+color:#FFFFFF;
+
+}
+
 
 
 @media(max-width: 761px){
@@ -55,7 +67,8 @@ text-align: justify;
     }
 
     .containerForContent{
-        width:100%;
+        width:auto;
+        padding: 10px;
        }
 
     .title{
@@ -65,10 +78,11 @@ text-align: justify;
 
        .text{
         font-size: 14px;
-        
-        
+      
+
         }
 
+     
     .containerForImage{
         width:100%;
       }
