@@ -1,7 +1,7 @@
 class Title {
     constructor(text = 'Title') {
 
-        const title = document.createElement('p')
+        const title = document.createElement('h1')
 
         this.text = text
         this.title = title

@@ -1,13 +1,14 @@
 body,html{
     margin:0;
     padding: 0;
+    font-family: 'Roboto';
 }
 
 .rootContainer{
 padding-top: 96px;
 display: flex;
 justify-content: space-evenly;
-width:1440px;
+max-width:1440px;
 height: 960px;
 
 }
@@ -18,7 +19,6 @@ height: 960px;
     background: url(/frontend-recruitment-task/images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale\,w_1002.jpg); 
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
     width:505px;
     height: 330px;
     
@@ -30,39 +30,48 @@ height: 960px;
    
 }
 
-.containerForContent p{
-
-    font-family: 'Roboto';
+.title{
     font-size: 43px;
     font-weight: 700;
     line-height: 50,4px;
+}
+
+.text{
+font-size: 16px;
+font-weight: 300;
+line-height: 24px;
+text-align: justify;
+
 }
 
 
 
 @media(max-width: 761px){
 
-    .body{
-        overflow-x:hidden;
-    }
-
+  
     .rootContainer{
-        width: auto;
         flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
+        overflow-x: hidden;  
     }
 
     .containerForContent{
-        width:100vw;
-    
-    }
+        width:100%;
+       }
+
+    .title{
+       font-size: 30px;
+       padding: 10px;
+       }
+
+       .text{
+        font-size: 14px;
+        
+        
+        }
 
     .containerForImage{
-        width: 100vw;
-        background-image: url(/frontend-recruitment-task/images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_1_1\,c_fill\,g_auto__c_scale\,w_767.jpg); 
-       
-    }
+        width:100%;
+      }
 
 }
 
