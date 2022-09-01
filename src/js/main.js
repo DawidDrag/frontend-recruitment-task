@@ -26,4 +26,7 @@ const buttonForContent = new Button()
 containerForContent.render().appendChild(buttonForContent.render()).classList.add('button')
 
 
+const showPopUp = () => console.log('clicked')
+
+buttonForContent.render().addEventListener('click', showPopUp)
 
