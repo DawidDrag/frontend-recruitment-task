@@ -67,13 +67,12 @@ cursor: pointer;
    display: none;
     align-items: center;
     justify-content: center;
+   
     
 
 }
 
-.popup-close{
-    display: none;
-}
+
 
 .popup-open{
     display:flex;
@@ -81,9 +80,10 @@ cursor: pointer;
 
 .popup{
     width:920px ;
-    height: 210px;
+    height: 250px;
     background-color: white;
-    z-index: -1;
+   
+   
 }
 
 .popupContent h2{
@@ -95,6 +95,10 @@ cursor: pointer;
 
 .popupContent h3{
     font-size: 25px;
+    margin-left: 90px;
+}
+
+.popupContent button {
     margin-left: 90px;
 }
 

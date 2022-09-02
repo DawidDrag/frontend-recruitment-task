@@ -3,8 +3,8 @@ import Title from "./TitleJS.js"
 import Text from "./TextJS.js"
 import Button from "./ButtonJS.js"
 
-let clickSum = 0
 
+let clickSum = 0
 
 const rootContainer = new Container()
 document.body.appendChild(rootContainer.render()).classList.add('rootContainer')
@@ -33,27 +33,46 @@ const popup = document.querySelector('.popupBackground')
 const popupContent = document.querySelector('.popupContent')
 
 
-
 const closePopup = (e) => {
 
-    if (e.target.classList.value !== 'popup') {
+    if (e.target.classList.value !== 'popup' && e.target.classList.value !== 'popupContent' && e.target.classList.value !== '') {
 
         popup.classList.remove('popup-open')
     }
-
 }
-
 
 
 const showPopup = (e) => {
 
+    const resetBtn = document.createElement('button')
+    resetBtn.innerText = 'Reset'
+    resetBtn.classList.add('button', 'resetBtn')
+
+    const resetBtnEl = document.querySelector('.resetBtn')
+    console.log(resetBtnEl)
+
+    if (clickSum > 4 && resetBtnEl === null) {
+
+        popupContent.appendChild(resetBtn)
+        resetBtn.addEventListener('click', () => {
+            clickSum = 0
+            popupContent.removeChild(resetBtn)
+
+        })
+
+    }
+
     clickSum = clickSum + 1
 
-    const spanEle = document.querySelector('.clickSum')
-    const h2element = document.createElement('h2')
+    localStorage.setItem('clickSum', clickSum)
 
-    spanEle.innerText = clickSum
-    popupContent.appendChild(h2element)
+    const clickSumFromStorage = localStorage.getItem('clickSum')
+    console.log(clickSumFromStorage)
+
+    const spanEle = document.querySelector('.clickSum')
+
+    spanEle.innerText = clickSumFromStorage
+
     popup.classList.add('popup-open')
 }
 
