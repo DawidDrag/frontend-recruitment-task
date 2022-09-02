@@ -3,6 +3,9 @@ import Title from "./TitleJS.js"
 import Text from "./TextJS.js"
 import Button from "./ButtonJS.js"
 
+let clickSum = 0
+
+
 const rootContainer = new Container()
 document.body.appendChild(rootContainer.render()).classList.add('rootContainer')
 rootContainer.background('#E5E5E5')
@@ -26,7 +29,35 @@ const buttonForContent = new Button()
 containerForContent.render().appendChild(buttonForContent.render()).classList.add('button')
 
 
-const showPopUp = () => console.log('clicked')
+const popup = document.querySelector('.popupBackground')
+const popupContent = document.querySelector('.popupContent')
 
-buttonForContent.render().addEventListener('click', showPopUp)
+
+
+const closePopup = (e) => {
+
+    if (e.target.classList.value !== 'popup') {
+
+        popup.classList.remove('popup-open')
+    }
+
+}
+
+
+
+const showPopup = (e) => {
+
+    clickSum = clickSum + 1
+
+    const spanEle = document.querySelector('.clickSum')
+    const h2element = document.createElement('h2')
+
+    spanEle.innerText = clickSum
+    popupContent.appendChild(h2element)
+    popup.classList.add('popup-open')
+}
+
+
+buttonForContent.render().addEventListener('click', showPopup)
+popup.addEventListener('click', closePopup)
 
