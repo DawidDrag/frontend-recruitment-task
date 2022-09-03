@@ -64,7 +64,7 @@ const showPopup = (e) => {
     resetBtn.classList.add('button', 'resetBtn')
 
     const resetBtnEl = document.querySelector('.resetBtn')
-   
+
     if (clickSum > 4 && resetBtnEl === null) {
 
         popupContent.appendChild(resetBtn)
@@ -81,7 +81,7 @@ const showPopup = (e) => {
     localStorage.setItem('clickSum', clickSum)
 
     const clickSumFromStorage = localStorage.getItem('clickSum')
-   
+
     const spanEle = document.querySelector('.clickSum')
 
     spanEle.innerText = clickSumFromStorage
