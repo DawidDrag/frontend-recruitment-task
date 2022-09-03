@@ -5,17 +5,15 @@ body,html{
 }
 
 .rootContainer{
-padding-top: 96px;
-display: flex;
-justify-content: space-evenly;
-max-width:1440px;
-height: 960px;
+    padding-top: 96px;
+    display: flex;
+    justify-content: space-evenly;
+    max-width:1440px;
+    height: 960px;
 
 }
 
 .containerForImage{
-
-    
     background: url(/frontend-recruitment-task/images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale\,w_1002.jpg); 
     background-repeat: no-repeat;
     background-size: cover;
@@ -37,42 +35,35 @@ height: 960px;
 }
 
 .text{
-font-size: 16px;
-font-weight: 300;
-line-height: 24px;
-text-align: justify;
-
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: justify;
 }
 
 .button{
-background-color: #E4C1AE ;
-border-radius: 32px;
-width: 128px;
-height: 48px;
-font-size: 16px;
-font-weight: 700;
-border:none;
-color:#FFFFFF;
-cursor: pointer;
+    background-color: #E4C1AE ;
+    border-radius: 32px;
+    width: 128px;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 700;
+    border:none;
+    color:#FFFFFF;
+    cursor: pointer;
 
 }
 
-
 .popupBackground{
-
     position: fixed;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0,0,0,0.7);
-   display: none;
+    display: none;
     align-items: center;
     justify-content: center;
    
-    
-
 }
-
-
 
 .popup-open{
     display:flex;
@@ -82,24 +73,23 @@ cursor: pointer;
     width:920px ;
     height: 250px;
     background-color: white;
-   
-   
+     
 }
 
+.popupContent{
+    margin-left: 90px;
+
+}
 .popupContent h2{
     font-size: 43px;
     font-weight: 700;
     line-height: 50.4px;
-    margin-left: 90px;
+ 
 }
 
 .popupContent h3{
     font-size: 25px;
-    margin-left: 90px;
-}
-
-.popupContent button {
-    margin-left: 90px;
+    
 }
 
 
@@ -107,47 +97,60 @@ cursor: pointer;
 @media(max-width: 761px){
 
   
-    .rootContainer{
-        flex-direction: column;
-        overflow-x: hidden;  
-        align-items: center;
+.rootContainer{
+    flex-direction: column;
+    overflow-x: hidden;  
+    align-items: center;
     }
 
-    .containerForContent{
-        width:90%;
-        padding: 10px;
-       }
+.containerForContent{
+    width:90%;
+    padding: 10px;
+    }
 
-    .title{
-       font-size: 30px;
-       padding: 10px;
-       }
+.title{
+    font-size: 30px;
+    padding: 10px;
+    }
 
-       .text{
-        font-size: 14px;
-      
+.text{
+    font-size: 14px;
+    }
 
-        }
-
-     
     .containerForImage{
-        width:90%;
-      }
-
-      .popup{
-        width:350px ;
-      }
-
-      .popupContent h2{
-       margin-left: 10px;
+    width:90%;
     }
-    .popupContent h3{
-        margin-left: 10px;
-     }
-    
-    
+
+.popup{
+    width:350px ;
+    }
+
+.popupContent{
+    margin-left: 10px;
+    }
+
 
 }
 
 
+@media(min-width: 762px) and (max-width:1281px){
 
+.rootContainer{
+    flex-direction: column;
+    overflow-x: hidden;  
+    align-items: center;
+    }
+
+.popup{
+    width:650px ;
+    }
+.containerForImage{
+    width:90%;
+    height: 60%;
+    }
+.containerForContent{
+    width:90%;
+    padding: 10px;
+    }
+
+}

@@ -10,7 +10,6 @@ class Title {
     render() {
 
         this.title.innerText = this.text
-
         return this.title
     }
 }
